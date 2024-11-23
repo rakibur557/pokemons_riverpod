@@ -8,6 +8,7 @@ class HTTPService {
   Future<Response?> get(String path) async {
     try {
       Response res = await _dio.get(path);
+      return res;
     } catch (e) {
       print(e);
     }
